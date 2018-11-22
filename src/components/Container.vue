@@ -3,7 +3,7 @@
     <div v-if="showProgress" class="mdui-progress">
       <div class="mdui-progress-indeterminate"></div>
     </div>
-    <div id="item" class="mdui-card" v-for="subject in subjects">
+    <div class="mdui-card item" v-for="subject in subjects">
       <div class="mdui-card-media">
         <img v-bind:src="subject.images.medium"/>
         <div class="mdui-card-menu">
@@ -60,9 +60,14 @@
         }
       },
       getData(list) {
+        let parser = document.createElement('a');
         this.$http.jsonp('//api.douban.com/v2/movie/' + list).then(response => {
           if (response.status === 200) {
             this.showProgress = false;
+            response.body.subjects.forEach((e, i) => {
+              parser.href = e.images.medium;
+              e.images.medium = "http://img3.doubanio.com" + parser.pathname;
+            });
             this.subjects = response.body.subjects;
           } else {
             console.error(response);
@@ -92,7 +97,7 @@
 
 <style scoped>
   @media (min-width: 1024px) {
-    #item {
+    .item {
       width: 23.5%;
       display: inline-block;
       margin-left: 1%;
