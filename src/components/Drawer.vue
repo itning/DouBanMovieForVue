@@ -27,7 +27,7 @@
       </li>
       <li class="mdui-list-item mdui-ripple">
         <label class="mdui-switch">
-          <input type="checkbox" id="night_mode"/>
+          <input type="checkbox" id="night_mode" v-model="night_mode"/>
           <i class="mdui-switch-icon"></i>
         </label>
         <div class="mdui-list-item-content">夜间模式</div>
@@ -41,7 +41,14 @@
     name: "drawer",
     data() {
       return {
-        nowShow: ''
+        nowShow: '',
+        night_mode: false
+      }
+    },
+    watch: {
+      night_mode(now, old) {
+        localStorage.night_mode = now;
+        this.setNightMode(now);
       }
     },
     computed: {
@@ -58,6 +65,21 @@
             break;
         }
         return this.$route.path;
+      }
+    },
+    methods: {
+      setNightMode(status) {
+        if (status) {
+          document.getElementsByTagName("body")[0].className = "mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-dark";
+        } else {
+          document.getElementsByTagName("body")[0].className = "mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink";
+        }
+      }
+    },
+    mounted() {
+      if (localStorage.night_mode === 'true') {
+        this.night_mode = true;
+        this.setNightMode(true);
       }
     }
   }

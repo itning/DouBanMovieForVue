@@ -7,7 +7,7 @@
       <div class="mdui-card-media">
         <img v-bind:src="subject.images.medium"/>
         <div class="mdui-card-menu">
-          <a v-bind:href="subject.alt" class="mdui-btn mdui-btn-icon mdui-text-color-white"><i
+          <a v-bind:href="subject.alt" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-white"><i
             class="mdui-icon material-icons">info</i>
           </a>
         </div>
