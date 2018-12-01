@@ -14,13 +14,13 @@
       </div>
       <div class="mdui-card-primary">
         <div class="mdui-card-primary-title">{{subject.title}}</div>
-        <div class="mdui-card-primary-subtitle">导演:<span v-for="director in subject.directors">{{director.name}}</span>
+        <div class="mdui-card-primary-subtitle">导演：<span v-for="director in subject.directors">{{director.name}}</span>
         </div>
       </div>
-      <div class="mdui-card-content">演员:<span v-for="(cast,index) in subject.casts">{{cast.name}}{{(index!==(subject.casts.length-1))? ',':''}}</span><br>
-        类型:<span v-for="(genre,index) in subject.genres">{{genre}}{{(index!==(subject.genres.length-1))? ',':''}}</span><br>
-        年代:{{subject.year}}<br>
-        豆瓣评分:{{subject.rating.average}}
+      <div class="mdui-card-content">演员：<span v-for="(cast,index) in subject.casts">{{cast.name}}{{(index!==(subject.casts.length-1))? '，':''}}</span><br>
+        类型：<span v-for="(genre,index) in subject.genres">{{genre}}{{(index!==(subject.genres.length-1))? '，':''}}</span><br>
+        年代：{{subject.year}}<br>
+        豆瓣评分：{{subject.rating.average}}
       </div>
     </div>
   </section>
@@ -43,6 +43,8 @@
       list(now, old) {
         this.showProgress = true;
         this.subjects = [];
+        this.page = 1;
+        this.total = 0;
         this.switch_list(now);
       }
     },
