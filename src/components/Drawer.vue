@@ -12,17 +12,17 @@
     <ul class="mdui-list mdui-card-content" mdui-collapse="{accordion: true}">
       <li class="mdui-list-item mdui-ripple" v-bind:class="{'mdui-list-item-active':nowPath==='/in_theaters'}">
         <i class="mdui-list-item-icon mdui-icon material-icons">whatshot</i>
-        <router-link to="/in_theaters" class="mdui-list-item-content">正在热映
+        <router-link to="in_theaters" class="mdui-list-item-content">正在热映
         </router-link>
       </li>
       <li class="mdui-list-item mdui-ripple" v-bind:class="{'mdui-list-item-active':nowPath==='/coming_soon'}">
         <i class="mdui-list-item-icon mdui-icon material-icons">video_library</i>
-        <router-link to="/coming_soon" class="mdui-list-item-content">即将上映
+        <router-link to="coming_soon" class="mdui-list-item-content">即将上映
         </router-link>
       </li>
       <li class="mdui-list-item mdui-ripple" v-bind:class="{'mdui-list-item-active':nowPath==='/top250'}">
         <i class="mdui-list-item-icon mdui-icon material-icons">sort</i>
-        <router-link to="/top250" class="mdui-list-item-content">Top250
+        <router-link to="top250" class="mdui-list-item-content">Top250
         </router-link>
       </li>
       <li class="mdui-list-item mdui-ripple">
