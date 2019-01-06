@@ -1,5 +1,5 @@
 {
-  "name": "DouBanMovieForVue",
+  "name": "douban_movie_for_vue",
   "version": "1.0.0",
   "description": "A project that displays movie information DouBan api use Vue.js",
   "author": "ITNING <3579677768@qq.com>",
@@ -26,7 +26,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.0",
+    "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
