@@ -2,8 +2,6 @@
 
 > 使用Vue.JS和豆瓣电影提供的Api创建的电影客户端
 
-![]()
-
 ## Build Setup
 
 ``` bash
@@ -21,3 +19,11 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## View
+[http://itning.top/douban](http://itning.top/douban)
+
+![](https://raw.githubusercontent.com/itning/DouBanMovieForVue/master/pic/1.png)
+![](https://raw.githubusercontent.com/itning/DouBanMovieForVue/master/pic/2.png)
+![](https://raw.githubusercontent.com/itning/DouBanMovieForVue/master/pic/3.png)
+![](https://raw.githubusercontent.com/itning/DouBanMovieForVue/master/pic/4.png)
