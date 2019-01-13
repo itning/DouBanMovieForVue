@@ -1,6 +1,8 @@
 # DouBanMovieForVue
 
-> A project that displays movie information DouBan api use Vue.js"
+> 使用Vue.JS和豆瓣电影提供的Api创建的电影客户端
+
+![]()
 
 ## Build Setup
 
